@@ -1,0 +1,17 @@
+/*
+Theme Name:        NP Portfolio
+Theme URI:         https://github.com/Npnk1
+Author:            Nikita Pasenkov
+Description:       Custom portfolio-theme voor M9PROG (Mediacollege Amsterdam). Gebouwd met Bootstrap, Sass, npm en Webpack.
+Version:           1.0.0
+Requires at least: 6.4
+Requires PHP:      8.1
+License:           GPL-2.0-or-later
+License URI:       https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain:       np-portfolio
+*/
+
+/*
+ * Dit bestand is nodig zodat WordPress het theme herkent.
+ * De echte styling staat in src/scss en wordt door Webpack gebouwd naar dist/main.css.
+ */

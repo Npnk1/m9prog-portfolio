@@ -1,0 +1,65 @@
+// De hero is het enige opvallende element van de site:
+// de naam groot op Delfts blauw, met geel als accent.
+
+.hero {
+  overflow: hidden;
+  padding-block: clamp(4rem, 12vw, 9rem) clamp(3.5rem, 9vw, 7rem);
+  background: $np-delft;
+  color: $np-white;
+}
+
+.hero__name {
+  max-width: 10ch;
+  margin: 0 0 1.5rem;
+  font-size: clamp(3.5rem, 16vw, 10rem);
+  font-weight: 800;
+  line-height: .88;
+  letter-spacing: -0.05em;
+}
+
+.hero__role {
+  margin-bottom: 1.25rem;
+  color: $np-yellow;
+  font-size: clamp(1.25rem, 2.5vw, 1.625rem);
+  font-weight: 600;
+}
+
+.hero__intro {
+  max-width: 46ch;
+  color: rgba($np-white, .9);
+  font-size: clamp(1.0625rem, 1.6vw, 1.25rem);
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  a {
+    color: $np-white;
+  }
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .75rem;
+  margin-top: 2.25rem;
+}
+
+// Eén bewegend moment bij het laden, alleen als de gebruiker beweging toestaat
+@media (prefers-reduced-motion: no-preference) {
+  .hero__name {
+    animation: np-rise .8s cubic-bezier(.2, .7, .2, 1) both;
+  }
+
+  @keyframes np-rise {
+    from {
+      opacity: 0;
+      transform: translateY(.15em);
+    }
+
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}

@@ -1,0 +1,16 @@
+# Geheimen
+.env
+
+# Dependencies
+node_modules/
+
+# Database-dumps worden apart ingeleverd, niet via Git
+database/*.sql
+database/*.zip
+
+# Systeem / editor
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/

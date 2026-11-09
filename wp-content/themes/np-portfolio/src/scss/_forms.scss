@@ -1,0 +1,57 @@
+// Contactformulier en meldingen.
+
+.contact-form {
+  max-width: 40rem;
+}
+
+.form-label {
+  font-weight: 600;
+}
+
+.form-optional {
+  color: $np-muted;
+  font-weight: 400;
+}
+
+.form-control {
+  padding: .75rem 1rem;
+}
+
+// Bootstrap verbergt .invalid-feedback standaard; de server bepaalt hier wanneer het zichtbaar is
+.invalid-feedback {
+  display: block;
+  font-weight: 500;
+}
+
+.form-notice {
+  margin-bottom: 2rem;
+  padding: 1.25rem 1.5rem;
+  border-left: 6px solid;
+  border-radius: $border-radius-lg;
+  background: $np-white;
+
+  h2 {
+    margin-bottom: .5rem;
+  }
+
+  p:last-child,
+  ul:last-child {
+    margin-bottom: 0;
+  }
+
+  ul {
+    padding-left: 1.2rem;
+  }
+}
+
+.form-notice--success {
+  border-color: #1e7a4c;
+}
+
+.form-notice--error {
+  border-color: $danger;
+
+  a {
+    color: $danger;
+  }
+}

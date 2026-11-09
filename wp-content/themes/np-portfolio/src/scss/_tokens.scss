@@ -1,0 +1,45 @@
+// Kleuren: Delfts blauw als basis, één warme gele accentkleur.
+$np-delft:      #233d91;
+$np-delft-deep: #172a66;
+$np-paper:      #f4f6f9;
+$np-white:      #fff;
+$np-ink:        #151a2d;
+$np-muted:      #535b72;
+$np-yellow:     #f6c445;
+$np-line:       #d3d9e6;
+
+// Bootstrap-variabelen overschrijven
+$primary:          $np-delft;
+$danger:           #b42318; // donkerder rood: beter contrast voor foutmeldingen
+$body-bg:          $np-paper;
+$body-color:       $np-ink;
+$link-color:       $np-delft;
+$link-hover-color: $np-delft-deep;
+
+$font-family-sans-serif: "Bricolage Grotesque Variable", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-size-base:       1.0625rem;
+$line-height-base:     1.6;
+$headings-font-weight: 700;
+$headings-line-height: 1.1;
+
+$border-radius:    .25rem;
+$border-radius-sm: .125rem;
+$border-radius-lg: .375rem;
+
+$btn-font-weight:   600;
+$btn-padding-x-lg:  1.5rem;
+
+$input-bg:                 $np-white;
+$input-border-color:       #7b849b; // minimaal 3:1 contrast met de achtergrond
+$input-focus-border-color: $np-delft;
+$focus-ring-color:         rgba($np-delft, .35);
+
+$navbar-padding-y: 1rem;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1240px
+);

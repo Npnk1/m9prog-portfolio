@@ -1,0 +1,154 @@
+// Projectlijst (homepage en overzicht) en projectdetail.
+
+.project-list {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid $np-line;
+  list-style: none;
+}
+
+.project-row {
+  border-bottom: 1px solid $np-line;
+}
+
+.project-row__link {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem 2rem;
+  padding-block: 1.75rem;
+  color: inherit;
+  text-decoration: none;
+
+  @include media-breakpoint-up(md) {
+    grid-template-columns: minmax(12rem, 18rem) 1fr auto;
+    align-items: center;
+  }
+
+  &:hover .project-row__title,
+  &:focus-visible .project-row__title {
+    color: $np-delft;
+    text-decoration: underline;
+    text-decoration-thickness: .08em;
+    text-underline-offset: .15em;
+  }
+}
+
+.project-row__media {
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  border: 1px solid $np-line;
+  border-radius: $border-radius;
+  background: $np-line;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.project-row__title {
+  margin: 0 0 .5rem;
+  font-size: clamp(1.5rem, 3vw, 2.125rem);
+  font-weight: 700;
+}
+
+.project-row__excerpt {
+  max-width: 60ch;
+  margin: 0 0 .5rem;
+}
+
+.project-row__tech {
+  margin: 0;
+  color: $np-muted;
+  font-size: .95rem;
+}
+
+.project-row__year {
+  margin: 0;
+  color: $np-muted;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+
+  @include media-breakpoint-up(md) {
+    align-self: start;
+    padding-top: .4rem;
+  }
+}
+
+// Detailpagina
+.project__figure {
+  margin-top: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 0;
+
+  img {
+    width: 100%;
+    height: auto;
+    border: 1px solid $np-line;
+    border-radius: $border-radius-lg;
+  }
+}
+
+.project-facts {
+  margin: 0;
+  padding: 1.5rem;
+  border: 1px solid $np-line;
+  border-radius: $border-radius-lg;
+  background: $np-white;
+
+  dt {
+    color: $np-muted;
+    font-size: .9rem;
+    font-weight: 600;
+  }
+
+  dd {
+    margin: .25rem 0 1.25rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    position: sticky;
+    top: 1.5rem;
+  }
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .4rem;
+  margin: .4rem 0 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    padding: .2rem .6rem;
+    border: 1px solid $np-line;
+    border-radius: $border-radius-sm;
+    background: $np-paper;
+    font-size: .9rem;
+  }
+}
+
+.project-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: clamp(3rem, 6vw, 5rem);
+  padding-top: 1.5rem;
+  border-top: 1px solid $np-line;
+
+  a {
+    font-weight: 600;
+  }
+}
+
+.project-nav__next {
+  margin-left: auto;
+  text-align: right;
+}

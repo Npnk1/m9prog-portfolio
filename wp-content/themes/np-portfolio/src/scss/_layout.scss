@@ -1,0 +1,204 @@
+// Header, footer, secties en paginakoppen.
+
+.site-header {
+  border-bottom: 1px solid $np-line;
+  background: $np-paper;
+
+  .navbar {
+    --bs-navbar-color: #{$np-ink};
+    --bs-navbar-hover-color: #{$np-delft};
+    --bs-navbar-active-color: #{$np-delft};
+  }
+
+  .nav-link {
+    font-weight: 500;
+
+    &.active {
+      text-decoration: underline;
+      text-decoration-thickness: 3px;
+      text-underline-offset: .45em;
+    }
+  }
+}
+
+.site-brand {
+  color: $np-ink;
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  text-decoration: none;
+
+  &:hover {
+    color: $np-delft;
+  }
+}
+
+.navbar-toggler {
+  border-color: $np-line;
+}
+
+@include media-breakpoint-up(md) {
+  .site-header .navbar-nav .nav-link {
+    padding-inline: .85rem;
+  }
+}
+
+// Secties
+.section {
+  padding-block: clamp(3rem, 7vw, 6rem);
+}
+
+.section--tight {
+  padding-block: clamp(2rem, 5vw, 4rem);
+}
+
+.section--about {
+  border-top: 1px solid $np-line;
+}
+
+.section__head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: .5rem 2rem;
+  margin-bottom: 2rem;
+
+  h2 {
+    margin: 0;
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  }
+}
+
+.section__more {
+  font-weight: 600;
+}
+
+// Paginakop
+.page-head {
+  padding-block: clamp(3rem, 7vw, 5.5rem) clamp(1.5rem, 3vw, 2.5rem);
+  border-bottom: 1px solid $np-line;
+}
+
+.page-head__title {
+  max-width: 18ch;
+  margin-bottom: 1rem;
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.035em;
+}
+
+.page-head__lead {
+  max-width: 52ch;
+  margin: 0;
+  color: $np-muted;
+  font-size: 1.25rem;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+}
+
+.about-teaser {
+  max-width: 52ch;
+  font-size: 1.375rem;
+  line-height: 1.5;
+}
+
+.side-note {
+  padding: 1.5rem;
+  border: 1px solid $np-line;
+  border-radius: $border-radius-lg;
+  background: $np-white;
+}
+
+.side-note__photo {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: $border-radius;
+}
+
+.side-note__small {
+  margin: 1rem 0 0;
+  color: $np-muted;
+  font-size: .95rem;
+}
+
+// Blog-terugval
+.post-list__item + .post-list__item {
+  margin-top: 2.5rem;
+}
+
+.post-list__meta {
+  color: $np-muted;
+  font-size: .95rem;
+}
+
+// Paginering van WordPress
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  margin-top: 2.5rem;
+
+  .page-numbers {
+    display: inline-block;
+    padding: .4rem .8rem;
+    border: 1px solid $np-line;
+    border-radius: $border-radius;
+    text-decoration: none;
+
+    &.current {
+      border-color: $np-delft;
+      background: $np-delft;
+      color: $np-white;
+    }
+  }
+}
+
+// Footer
+.site-footer {
+  padding-block: clamp(3rem, 6vw, 5rem);
+  background: $np-delft-deep;
+  color: rgba($np-white, .85);
+
+  a {
+    color: $np-white;
+  }
+}
+
+.site-footer__lead {
+  max-width: 28ch;
+  margin: 0;
+  color: $np-white;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 600;
+  line-height: 1.25;
+
+  a {
+    text-decoration-color: $np-yellow;
+    text-decoration-thickness: .1em;
+  }
+}
+
+.site-footer__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin: 0 0 .75rem;
+  padding: 0;
+  list-style: none;
+
+  @include media-breakpoint-up(lg) {
+    justify-content: flex-end;
+  }
+}
+
+.site-footer__copy {
+  margin: 0;
+  font-size: .9rem;
+}
