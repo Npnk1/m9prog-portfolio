@@ -1,41 +1,33 @@
 # AI-verantwoording
 
-Volgens de opdracht bewaar ik mijn prompts en noteer ik welke code door AI is gemaakt.
+## Hoe ik AI heb gebruikt
 
-## Tool
+Ik heb Claude (claude.ai) en Claude Code gebruikt als hulpmiddel bij dit project.
+De eerste versie van de code is met Claude gegenereerd op basis van de opdrachtomschrijving:
+het theme, de Docker-configuratie en het seed-script. Daarna heb ik het project zelf ingericht,
+gecontroleerd en aangepast.
 
-Claude (Anthropic), via claude.ai, november 2026.
 
-## Prompt
-
-Ik heb de opdrachtomschrijving van M9PROG – Custom Website en de link naar de opdrachtensite gegeven,
-en gevraagd om in één keer een complete eerste versie te genereren die ik daarna zelf ga controleren en aanpassen.
-De oorspronkelijke prompt was in het Russisch.
-
-<!-- Plak hier eventueel je letterlijke prompt(s). -->
-
-## Gegenereerd door AI (eerste versie)
-
-Alle bestanden van de eerste versie:
+## Gegenereerd met AI
 
 - `docker-compose.yml`, `.env.example`, `.gitignore`, `.gitattributes`
-- `seed/seed.sh`, de teksten in `seed/content/` en de afbeeldingen in `seed/images/`
-- het volledige theme in `wp-content/themes/np-portfolio/` (PHP-templates, `inc/`, Sass, JavaScript, `package.json`, `webpack.config.js`)
-- `README.md` en dit bestand
+- `seed/` (script, teksten en tijdelijke afbeeldingen)
+- `wp-content/themes/np-portfolio/` (alle theme-bestanden)
+- `README.md`
 
-## Zelf gecontroleerd en aangepast
+## Wat ik zelf heb gedaan
 
-<!-- Vul dit aan terwijl je werkt. Dit wordt gevraagd bij de beoordeling. -->
+- Bepaald welke projecten in mijn portfolio komen en RijSchool vervangen door het DP-project.
+- De informatie voor de projectteksten aangeleverd en de teksten gecontroleerd en ingekort,
+  bijvoorbeeld geen aantallen of details van de klant.
+- GitHub CLI geïnstalleerd, ingelogd en de private repository opgezet.
+- De site lokaal in de browser gecontroleerd.
 
-- [ ] Docker-omgeving gestart en de site lokaal getest
-- [ ] Projectteksten gecontroleerd en waar nodig herschreven
+## Nog te doen
+
+Als ik dit gedaan heb, verplaats ik het naar "Wat ik zelf heb gedaan":
+
+- [ ] `inc/cpt-project.php` en `inc/project-meta.php` doorgenomen en zelf een veld toegevoegd
+- [ ] `inc/contact.php` doorgenomen: hoe een bericht van formulier naar dashboard gaat
+- [ ] Een kleur aangepast in `src/scss/_tokens.scss` en opnieuw gebouwd met `npm run build`
 - [ ] Afbeeldingen vervangen door echte screenshots
-- [ ] `inc/cpt-project.php` en `inc/project-meta.php` doorgelezen en kan ik uitleggen
-- [ ] `inc/contact.php` doorgelezen en kan ik uitleggen
-- [ ] `webpack.config.js` en de Sass-opbouw doorgelezen en kan ik uitleggen
-- [ ] Eigen aanpassingen: …
-- Projectteksten en de pagina "Over mij" opnieuw geschreven op basis van mijn eigen antwoorden over elk project
-  (wat ik heb gedaan, hoe het ging, wat het resultaat is). De inhoud komt van mij; ik heb mijn antwoorden in het
-  Russisch gegeven en AI heeft ze naar het Nederlands vertaald en alleen de taal verbeterd. RijSchool heb ik
-  vervangen door het project DP Industrieel Vastgoed.
-- Project DP: tekst door AI geschreven op basis van mijn informatie, door mij gecontroleerd.
