@@ -34,3 +34,8 @@ Alle bestanden van de eerste versie:
 - [ ] `inc/contact.php` doorgelezen en kan ik uitleggen
 - [ ] `webpack.config.js` en de Sass-opbouw doorgelezen en kan ik uitleggen
 - [ ] Eigen aanpassingen: …
+- Projectteksten en de pagina "Over mij" opnieuw geschreven op basis van mijn eigen antwoorden over elk project
+  (wat ik heb gedaan, hoe het ging, wat het resultaat is). De inhoud komt van mij; ik heb mijn antwoorden in het
+  Russisch gegeven en AI heeft ze naar het Nederlands vertaald en alleen de taal verbeterd. RijSchool heb ik
+  vervangen door het project DP Industrieel Vastgoed.
+- Project DP: tekst door AI geschreven op basis van mijn informatie, door mij gecontroleerd.

@@ -63,7 +63,7 @@ wp post delete 1 2 --force || true
 
 echo "Pagina's aanmaken..."
 HOME_ID=$(wp post create /seed/content/home.html --post_type=page --post_status=publish --post_title="Home" --post_name="home" --porcelain)
-ABOUT_ID=$(wp post create /seed/content/over-mij.html --post_type=page --post_status=publish --post_title="Over mij" --post_name="over-mij" --post_excerpt="Derdejaars student Software Developer in Amsterdam, op zoek naar een stage in webdevelopment." --porcelain)
+ABOUT_ID=$(wp post create /seed/content/over-mij.html --post_type=page --post_status=publish --post_title="Over mij" --post_name="over-mij" --post_excerpt="Tweedejaars student Software Developer in Amsterdam, op zoek naar een stage in webdevelopment." --porcelain)
 CONTACT_ID=$(wp post create /seed/content/contact.html --post_type=page --post_status=publish --post_title="Contact" --post_name="contact" --porcelain)
 
 wp option update show_on_front page
@@ -86,22 +86,25 @@ create_project() {
   if [ -n "$7" ]; then
     wp post meta update "$ID" _np_year "$7" >/dev/null
   fi
-  wp media import "/seed/images/$1.png" --post_id="$ID" --featured_image --title="$2" --alt="Afbeelding van project $2" >/dev/null
+  if [ -f "/seed/images/$1.png" ]; then
+    wp media import "/seed/images/$1.png" --post_id="$ID" --featured_image --title="$2" --alt="Afbeelding van project $2" >/dev/null
+  fi
   echo "  - $2"
 }
 
-create_project "rijschool" "RijSchool" \
-  "C#-applicatie voor een rijschool, gemaakt om objectgeoriënteerd programmeren te oefenen." \
-  "Solo-developer (schoolopdracht)" \
-  "C#, .NET, Git" \
-  "Basis van de applicatie met eigen klassen, velden en properties, gebouwd en gestart met dotnet build en dotnet run." \
-  "" "2026-03-01 10:00:00"
+create_project "dp-vastgoed" "DP Industrieel Vastgoed" \
+  "Website met een catalogus van industrieel en logistiek vastgoed voor een makelaar in Oekraïne." \
+  "Alles zelf: ontwerp met AI, ontwikkeling, contact met de opdrachtgever" \
+  "Next.js, TypeScript, Tailwind CSS, Claude Code" \
+  "De site is klaar; de klant controleert de teksten." \
+  "2026" "2026-10-25 10:00:00"
+wp post meta update "$ID" _np_link "https://dp-web-1.vercel.app/" >/dev/null
 
 create_project "web2go" "Web2Go" \
-  "Website voor een startend digitaal bureau, opgezet in drie talen." \
-  "Ontwerp en front-end. Gestart in een team, daarna zelfstandig verder." \
-  "Next.js, TypeScript, Tailwind CSS, ESLint" \
-  "Engelse homepage af; lint, type-check en build slagen. Layout gecontroleerd op 1920, 1440, 1024, 768 en 390 pixels breed. Routes voor Engels, Nederlands en Spaans." \
+  "Website voor een startend bureau, in drie talen." \
+  "Technical Co-Founder" \
+  "Next.js, TypeScript, Tailwind CSS" \
+  "Het project ligt stil; de site staat nog niet online." \
   "2026" "2026-09-01 10:00:00"
 
 create_project "arduino-web-serial" "Arduino in de browser" \
@@ -112,10 +115,10 @@ create_project "arduino-web-serial" "Arduino in de browser" \
   "2026" "2026-10-10 10:00:00"
 
 create_project "includeme" "IncludeMe" \
-  "Marketingwebsite en huisstijl voor een echte opdrachtgever." \
-  "Solo: huisstijl, ontwerp en website" \
-  "Huisstijl, webdesign, HTML, CSS" \
-  "Huisstijl in paars en turquoise op basis van de wens van de opdrachtgever. De website is in ontwikkeling." \
+  "Ontwerp voor de website van IncludeMe, een echte opdrachtgever." \
+  "Solo: ontwerp van de website" \
+  "Webdesign, huisstijl" \
+  "Het ontwerp is klaar, in de kleuren van de opdrachtgever. De website is nog niet gebouwd." \
   "2026" "2026-10-20 10:00:00"
 
 echo "Menu aanmaken..."
